@@ -1,6 +1,6 @@
 package chapter.one;
 
-public class chapter01_02 {
+public class Chapter01_02 {
 
   /*
    *  자바의 역사

@@ -1,6 +1,6 @@
 package chapter.one;
 
-public class chapter01_03 {
+public class Chapter01_03 {
   /*
    *  자바의 특징
    *

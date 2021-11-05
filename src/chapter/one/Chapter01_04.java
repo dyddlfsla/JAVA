@@ -1,6 +1,6 @@
 package chapter.one;
 
-public class chapter01_04 {
+public class Chapter01_04 {
   /*
   * 자바 가상 머신(JVM)
   *
