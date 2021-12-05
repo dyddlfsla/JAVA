@@ -1,8 +1,11 @@
 package chapter.four;
 
+import java.util.Scanner;
+
 public class Test {
 
   public static void main(String[] args) {
+
     int sum = 0;
     int i = 1;
     int sign = 1;

@@ -9,7 +9,7 @@ public class 연습문제 {
    * ① int x;
    *    10 < x && x < 20
    *
-   * ② ch != ' ' && ch != ?
+   * ② ch != ' ' && ch != '\t'
    *
    * ③ ch == 'x' || ch == 'X'
    *
@@ -51,19 +51,91 @@ public class 연습문제 {
    * sol:
    *
    *  int sum = 0;
-   *  int i = 1;
-   *  while (sum <= 100) {
-   *    if (i %2 == 0) {
-   *      -i;
-   *    }
-   *    sum += i;
-   *    i++;
-   *    System.out.println("i = " + i + "sum = " + sum);
-   *  }
+   *     int i = 1;
+   *     int sign = 1;
+   *     while (sum < 100) {
+   *       sum += i * sign;
+   *       System.out.println("i = " + i + ", sum = " + sum);
+   *       i++;
+   *       sign = -sign;
+   *     }
+   *  } //199까지 더 했을 때.
    *
+   *  5. 다음 for 문을 while 문으로 변경하시오.
+   *
+   *  sol:
+   *  int i = 0;
+   *     while (i <= 10) {
+   *       int j = 0;
+   *       while (j <= i) {
+   *         System.out.print("*");
+   *         j++;
+   *       }
+   *       System.out.println();
+   *       i++;
+   *     }
+   *
+   *  6. 두 개의 주사위를 던졌을 때, 눈의 합이 6이 되는 모든 경우의 수를 출력하는 프로그램을 작성하시오.
+   *
+   *  sol:
+   *  for (int i = 1; i <= 6; i++) {
+   *       for (int j = 1; j <= 6; j++) {
+   *         if (i + j == 6) {
+   *           System.out.printf("(%d, %d)%n", i, j);
+   *         }
+   *       }
+   *     }
+   *
+   *  7.
+   *
+   *  sol:
+   *  String str = "12345";
+   *     int sum = 0;
+   *
+   *     for (int i = 0; i < str.length(); i++) {
+   *       sum += (str.charAt(i) - '0');
+   *     }
+   *
+   *     System.out.println("sum = " + sum);
+   *   }
+   *
+   *  8.
+   *  sol:
+   *  int value = (int) (Math.random() * 6) + 1;
+   *     System.out.println("value = " + value);
+   *
+   *  9.
+   *  sol:
+   *  int num = 12345;
+   *     int sum = 0;
+   *
+   *     while (num > 0) {
+   *       sum += num %10;
+   *       num /= 10;
+   *     }
+   *     System.out.println("sum = " + sum);
+   *   }
+   *
+   *  10.
+   *  sol:
+   *  int answer = (int) (Math.random() * 100) + 1;
+   *     int input = 0;
+   *     int count = 0;
+   *
+   *     Scanner scanner = new Scanner(System.in);
+   *
+   *     do {
+   *       System.out.print("1과 100사이의 값을 입력하세요 :");
+   *       input = scanner.nextInt();
+   *       count++;
+   *
+   *       if (input > answer) {
+   *         System.out.println("더 작은 수를 입력하세요.");
+   *       } else {
+   *         System.out.println("더 큰 수를 입력하세요.");
+   *       }
+   *     } while (input != answer);
+   *     System.out.println("정답입니다. 시도한 횟수는 " + count + "번 입니다.");
    *
    * */
-
-
-
 }
