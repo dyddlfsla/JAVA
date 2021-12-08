@@ -30,10 +30,12 @@ public class Chapter05_18 {
    *
    *   int[][] score = new int[4][3];
    *
-   *   score[0][0] score[0][1] score[0][2]
-   *   score[1][0] score[1][1] score[1][2]
-   *   score[2][0] score[2][1] score[2][2]
-   *   score[3][0] score[3][1] score[3][2]
+   * ---------------------------------------------
+   * | score[0][0] | score[0][1] | score[0][2] |
+   * | score[1][0] | score[1][1] | score[1][2] |
+   * | score[2][0] | score[2][1] | score[2][2] |
+   * | score[3][0] | score[3][1] | score[3][2] |
+   * ---------------------------------------------
    *
    *
    * ◆ 2차원 배열의 초기화

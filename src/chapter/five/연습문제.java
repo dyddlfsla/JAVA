@@ -1,5 +1,7 @@
 package chapter.five;
 
+import java.util.Arrays;
+
 public class 연습문제 {
 
   /**
@@ -8,9 +10,9 @@ public class 연습문제 {
    *
    *  sol:
    *   ✔︎ ① int[] arr[]; //arr 라는 이름으로 2차원 int 배열을 생성한다.
-   *   ✖︎ ② int[] arr = {1, 2, 3,}; // 콤마(,)가 하나 더 들어갔다.
+   *   ✔︎ ② int[] arr = {1, 2, 3,}; // 마지막 쉼표(,)는 있어도 상관없다.
    *   ✔︎ ③ int[] arr = new int[5]; // 길이가 5인 int 배열을 생성한다.
-   *   ✔︎ ④ int[] arr = new int[]{1,2,3,4,5}; // 배열 선언과 초기화를 동시에 한다.
+   *   ✖︎︎ ④ int[] arr = new int[5]{1,2,3,4,5}; // 배열 생성과 초기화를 동시에 하는 경우 배열의 길이를 지정할 수 없다.
    *   ✖︎ ⑤ int arr[5]; // 길이 지정은 new 연산자를 통해야 한다.
    *   ✖︎ ⑥ int[] arr[] = new int[3][]; // 행과 열 모두 길이를 지정해야 한다.
    *
@@ -110,5 +112,8 @@ public class 연습문제 {
    *
    *
    * */
-
+  public static void main(String[] args) {
+    int[] arr[] = new int[3][5];
+    System.out.printf("arr[] : %s 입니다. %n", Arrays.deepToString(arr));
+  }
 }
