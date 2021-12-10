@@ -20,7 +20,7 @@ public class Chapter06_18 {
    *
    * */
   public static void main(String[] args) {
-    Math math = new Math();
+    MyMath2 math = new MyMath2();
     long result1 = math.add(5L, 3L);
     long result2 = math.subtract(5L, 3L);
     long result3 = math.multiply(5L, 3L);
@@ -33,7 +33,7 @@ public class Chapter06_18 {
   }
 }
 
-class Math {
+class MyMath2 {
 
   long add(long a, long b) {
     return a + b;
