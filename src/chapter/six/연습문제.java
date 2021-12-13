@@ -1,7 +1,5 @@
 package chapter.six;
 
-import java.util.Arrays;
-
 class MyTv {
 
   boolean isPowerOn;
