@@ -1,1 +1,1 @@
-# Let's go JAVA
+# Let's go Java study!
