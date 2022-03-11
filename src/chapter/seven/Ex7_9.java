@@ -72,7 +72,7 @@ class Buyer {
         break;
       }
       sum += cart[i].price;
-      itemList += cart[i].toString() + ", ";
+      itemList += (i == 0) ? "" + cart[i] : "," + cart[i];
     }
 
     System.out.printf("구입하신 물품의 총 금액은 %d 입니다.%n", sum);

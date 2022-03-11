@@ -1,4 +1,4 @@
-package chapter.seven;
+package chapter.seven.chapter_07_24;
 
 public class Chapter07_24 {
 
@@ -26,5 +26,39 @@ public class Chapter07_24 {
    *
    *
    * */
+
+  public static void main(String[] args) {
+
+    Car car2 = new Car();
+    FireEngine fireEngine = new FireEngine();
+    Ambulance ambulance = new Ambulance();
+    System.out.println(fireEngine.name);
+    System.out.println(fireEngine.year);
+    System.out.println(ambulance.name);
+    System.out.println(ambulance.year);
+
+    Car car = fireEngine;                    //OK. 조상인 Car 타입으로 형변환 가능(형변환 연산자 생략가능)
+    System.out.println(car.year);
+    // System.out.println(car.name); // Car 타입으로 형변환이 된만큼 리모컨의 버튼이 줄어들었으므로 car.name 을 사용할 수 없다.
+
+    FireEngine fireEngine2 = (FireEngine) car;     //OK. 자손인 FireEngine 타입으로도 형변환 가능.
+    System.out.println(fireEngine2.name);
+    //Ambulance ambulance = (Ambulance) fireEngine;  //에러. 상속관계가 아닌 경우 클래스 간의 형변환 불가.
+  }
 }
+
+class Car {
+  int year = 10;
+
+}
+class FireEngine extends Car {
+
+  String name = "FireEngine!!";
+
+}
+class Ambulance extends Car {
+
+  String name = "Ambulance";
+}
+
 
