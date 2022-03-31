@@ -29,7 +29,7 @@ public class Ex7_10 {
 class Marine extends Unit { //보병
 
   @Override
-  void move(int x, int y) {
+  public void move(int x, int y) {
     System.out.printf("Marine[x = %d, y = %d ]%n", x, y);
   }
 
@@ -41,7 +41,7 @@ class Marine extends Unit { //보병
 class Tank extends Unit {
 
   @Override
-  void move(int x, int y) {
+  public void move(int x, int y) {
     System.out.printf("Tank[x = %d, y = %d]%n", x, y);
   }
 
@@ -53,7 +53,7 @@ class Tank extends Unit {
 class DropShip extends Unit {
 
   @Override
-  void move(int x, int y) {
+  public void move(int x, int y) {
     System.out.printf("DropShip[ x = %d, y = %d]%n", x, y);
   }
 

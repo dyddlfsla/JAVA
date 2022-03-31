@@ -1,7 +1,7 @@
 package chapter.seven.chapter_07_36;
 
 
-import chapter.seven.chapter_07_34.Unit;
+import chapter.seven.chapter_07_37.Unit;
 
 public interface Attackable {
 
