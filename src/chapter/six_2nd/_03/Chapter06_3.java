@@ -1,4 +1,4 @@
-package chapter.six_2nd._3;
+package chapter.six_2nd._03;
 
 public class Chapter06_3 {
 
