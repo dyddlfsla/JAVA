@@ -7,7 +7,25 @@ import java.util.Date;
 public class Ex10_3 {
 
   static int paycheckCount(Calendar from, Calendar to) {
-    return 0;
+    int fromMonth = from.get(Calendar.YEAR) * 12 + from.get(Calendar.MONTH);
+    int toMonth = to.get(Calendar.YEAR) * 12 + to.get(Calendar.MONTH);
+    int monDiff = toMonth - fromMonth;
+    if (from == null || to == null) {
+      return 0;
+    }
+    if (from.equals(to) && from.get(Calendar.DATE) == 21) {
+      return 1;
+    }
+    if (monDiff < 0) {
+      return 0;
+    }
+    if (from.get(Calendar.DAY_OF_MONTH) <= 21 && to.get(Calendar.DAY_OF_MONTH) >= 21) {
+      monDiff++;
+    }
+    if (from.get(Calendar.DAY_OF_MONTH) > 21 && to.get(Calendar.DAY_OF_MONTH) < 21) {
+      monDiff--;
+    }
+    return monDiff;
   }
 
   static void printResult(Calendar from, Calendar to) {
@@ -43,7 +61,7 @@ public class Ex10_3 {
     toCal.set(2020, 2, 21);
     printResult(fromCal, toCal);
 
-    fromCal.set(2020, 0, 22);
+    fromCal.set(2021, 0, 22);
     toCal.set(2020, 2, 21);
     printResult(fromCal, toCal);
   }
