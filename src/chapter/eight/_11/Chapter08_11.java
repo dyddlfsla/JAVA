@@ -32,8 +32,12 @@ public class Chapter08_11 {
    *
    * */
   public static void main(String[] args) {
-    Person person = new Person("jace");
-    System.out.println(person.getName());
+    try {
+      Person person = new Person("jace");
+      System.out.println(person.getName());
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    }
   }
 }
 
@@ -44,9 +48,9 @@ class Person {
     return name;
   }
 
-  Person (String name) {
+  Person (String name) throws Exception {
       if (name.length() < 5) {
-        throw new RuntimeException("이름은 5자 이상이어야 합니다.");
+        throw new Exception("이름은 5자 이상이어야 합니다.");
       }
       this.name = name;
     }
