@@ -26,6 +26,8 @@ public class Chapter11_30 {
    * Comparable : 기본 정렬을 구현하는데 사용
    * Comparator : 기본 정렬 외에 다른 기준으로 정렬하고자 할 때 사용
    *
+   * equals 메서드는 모든 클래스가 가지고 있는 공통적인 메서드이지만, Comparator 를 구현하는 클래스는 오버라이딩이 필요할 수도 있다는 것을 알리기 위해서 정의한 것일 뿐,
+   * 그냥 compare(Object o1, Object o2) 만 구현하면 된다.
    *
    *
    * */
