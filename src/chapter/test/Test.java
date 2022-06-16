@@ -4,7 +4,7 @@ public class Test {
 
   public static void main(String[] args) {
     Father son = new Son();
-    System.out.println(son.name); //
+    System.out.println(son.name); //예상 결과?
     System.out.println(son.age);
     son.walk();
     System.out.println("==============");
