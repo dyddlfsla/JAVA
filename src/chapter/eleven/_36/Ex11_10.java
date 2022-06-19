@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 public class Ex11_10 {
@@ -71,6 +72,20 @@ class Person {
     return name + " : " + age;
   }
 
+  @Override
+  public boolean equals(Object obj) {
+    if (!(obj instanceof Person)) {
+      return false;
+    }
+    Person p = (Person) obj;
+    return name.equals(p.name) && age == p.age;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(name, age);
+  }
+
   /*
   * Person 클래스는 name 과 age 를 멤버변수로 갖는다. 이름과 나이가 같으면 같은 사람으로 인식하도록 하려는 의도로 작성하였다. 하지만 실행 결과를 보면
   * 두 인스턴스의 name 과 age 가 같음에도 불구하고 서로 다른 것으로 인식하여 'David : 10' 이 두 번 출력되었다. 클래스의 작성 의도대로 이 두 인스턴스를
@@ -82,6 +97,10 @@ class Person {
   *   }
   *   Person p = (Person) obj;
   *   return name.equals(p.name) && age == p.age;
+  *
+  * public int hashCode() {
+  *  return Objects.hash(name, age);
+  * }
   *
   *
   * */
