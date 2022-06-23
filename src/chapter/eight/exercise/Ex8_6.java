@@ -1,11 +1,9 @@
 package chapter.eight.exercise;
 
-public class Ex8_5 {
+public class Ex8_6 {
 
   /*
   * sol:
-  * 3
-  * 5
   *
   *
   * */
