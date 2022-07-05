@@ -20,6 +20,8 @@ public class Chapter09_3 {
 
     if (p1.equals(p2)) {
       System.out.println("p1 와 p2 는 같은 사람입니다.");
+      System.out.println(p1.hashCode());
+      System.out.println(p2.hashCode());
     } else {
       System.out.println("p1 와 p2 는 다른 사람입니다.");
     }
@@ -34,12 +36,25 @@ class Person {
   }
 
   @Override
-  public boolean equals(Object obj) {
-    if (obj instanceof Person) {
-      Person p1 = (Person) obj;
-      return this.id == p1.id;
-    } else {
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
       return false;
     }
+    Person person = (Person) o;
+    return id == person.id;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id);
   }
 }
+
+/*
+* equals 메서드가 Person 인스턴스의 주소값이 아닌 멤버변수 id 의 값을 비교하도록 하기위해 equals 메서드를 오버라이딩했다.
+* 이렇게 함으로써 서로 다른 인스턴스일지라도 같은 id(주민등록번호)를 가지고 있다면 equals 메서드로 비교했을 때 true 결과를 얻게 할 수 있다.
+*
+* */
