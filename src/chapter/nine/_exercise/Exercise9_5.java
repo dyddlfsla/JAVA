@@ -18,7 +18,7 @@ public class Exercise9_5 {
         srcBuffer.deleteCharAt(i);
       }
     }
-    return new String(srcBuffer);
+    return srcBuffer.toString();
   }
 
   public static void main(String[] args) {
