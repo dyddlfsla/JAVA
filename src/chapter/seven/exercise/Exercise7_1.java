@@ -61,7 +61,7 @@ class SutdaDeck {
   //1. - 메서드명: shuffle / 기능: 배열 cards 에 담긴 카드의 위치를 뒤섞는다. (Math.random() 사용) / 반환타입: 없음 / 매개변수: 없음
   public void shuffle() {
     for (int i = 0; i < cards.length; i++) {
-      int randomIdx = (int) (Math.random() * 20);
+      int randomIdx = (int) (Math.random() * CARD_NUM);
       SutdaCard tmp = cards[i];
       cards[i] = cards[randomIdx];
       cards[randomIdx] = tmp;
@@ -70,12 +70,15 @@ class SutdaDeck {
 
   //2. - 메서드명: pick / 기능: 배열 cards 에서 지정된 위치의 SutdaCard 를 반환한다. / 반환타입: SutdaCard / 매개변수: int index
   public SutdaCard pick(int index) {
+    if (index < 0 || index >= CARD_NUM) {
+      return null;
+    }
     return cards[index];
   }
 
   //3. - 메서드명: pick / 기능: 배열 cards 에서 임의의 위치의 SutdaCard 를 반환한다. (Math.random() 사용) / SutdaCard / 매개변수: 없음
   public SutdaCard pick() {
-    return cards[(int) (Math.random() * 20)];
+    return pick((int) (Math.random() * CARD_NUM));
   }
 }
 

@@ -36,7 +36,7 @@ class Product {
 class Tv extends Product {
 
   Tv() {
-    super(0); // 부모가 가지고 있는 별도의 생성자를 선택해 자식 클래스에서 직접 호출한다.
+    super(0); // 2. 부모가 가지고 있는 별도의 생성자를 선택해 자식 클래스에서 직접 호출한다.
   }
 
   @Override
