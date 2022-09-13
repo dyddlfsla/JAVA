@@ -1,6 +1,7 @@
 package chapter.twelve._07;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Chapter12_07 {
 
@@ -26,6 +27,16 @@ public class Chapter12_07 {
   public static void main(String[] args) {
     ArrayList<Student> list = new ArrayList<>();
     list.add(new Student("자바왕", 1, 1));
+    list.add(new Student("자바짱", 1, 2));
+    list.add(new Student("홍길동", 2, 1));
+
+    Iterator<Student> iterator = list.iterator();
+
+    while (iterator.hasNext()) {
+//      Student student = (Student) iterator.next(); Iterator 에 제네릭을 적용하지 않으면 이처럼 형변환이 필요함.
+      Student student = iterator.next();
+      System.out.println(student.name);
+    }
   }
 }
 
