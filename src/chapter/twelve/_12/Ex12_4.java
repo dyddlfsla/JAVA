@@ -39,7 +39,7 @@ class Juice {
 
 class Juicer {
 
-  static <T extends Fruit> Juice makeJuice(FruitBox<T> fruitBox) {
+  static Juice makeJuice(FruitBox<? extends Fruit> fruitBox) {
     String tmp = "";
     for (Fruit fruit : fruitBox.getList()) {
       tmp += fruit + " ";

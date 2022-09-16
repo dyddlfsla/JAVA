@@ -39,6 +39,23 @@ public class Chapter12_13 {
   *     return new Juice(tmp);
   *   }
   *
+  *  일단 이렇게 제네릭 메서드로 바꾸게 되면 이제 이 메서드를 호출하려면 아래와 같이 타입 변수에 타입을 대입해야 한다.
+  *
+  * Juicer.<Fruit>makeJuice(fruitBox);
+  * Juicer.<Apple>makeJuice(appleBox);
+  *
+  * 그러나 대부분의 경우 컴파일러가 대입된 타입을 추정할 수 있기 때문에 생략해도 된다.
+  *
+  * Juicer.makeJuice(appleBox); // 대입된 타입 변수 생략
+  *
+  * 여기서 한 가지 주의할 점은, 제네릭 메서드를 호출할 때 대입된 타입을 생략할 수 없는 경우에는 참조변수나 클래스 이름을 생략할 수 없다는 것이다.
+  *
+  * <Fruit>makeJuice(fruitBox);
+  * this.<Fruit>makeJuice(fruitBox);
+  * Juicer.<Fruit>makeJuice(fruitBox);
+  *
+  *
+  *
   * */
 
 }
