@@ -56,6 +56,7 @@ public class Chapter12_15 {
   *   ...
   *   }
   * }
+  *       ↓
   *
   * class Box {
   *   void add(Fruit t) {
@@ -63,18 +64,23 @@ public class Chapter12_15 {
   *   }
   * }
   *
-  * 2.
+  * 2. 제네릭 타입을 제거한 후에 타입이 일치하지 않으면, 형변환을 추가한다.
+  * List 의 get() 은 Object 타입을 반환하므로 형변환이 필요하다.
   *
+  *  T get(int i) {
+  *     return list.get(i);
+  *  }
   *
+  *        ↓
+  * Fruit get(int i) {
+  *   return (Fruit)list.get(i);
+  * }
   *
   *
   * */
   public static void main(String[] args) {
     Box<Object> objBox = new Box<>();
     Box<String> stringBox = new Box<>();
-
-
-
 
   }
 
