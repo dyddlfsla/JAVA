@@ -20,6 +20,7 @@ public class Chapter12_38 {
   *   String major(int i, int j); // 에러. 애너테이션 요소에는 매개변수를 선언할 수 없다.
   *   String minor() throws Exception; // 에러. 애너테이션 요소에는 예외를 선언할 수 없다.
   *   ArrayList<T> list(); // 에러. 애너테이션 요소에 타입 매개변수를 선언할 수 없다.
+  *
   * }
   *
   *
