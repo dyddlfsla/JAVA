@@ -1,4 +1,4 @@
-package chapter.twelve.exercise;
+package chapter.twelve.exercise._01;
 
 public class Ex12_1 {
 

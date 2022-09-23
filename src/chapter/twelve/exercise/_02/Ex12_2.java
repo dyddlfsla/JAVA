@@ -6,16 +6,21 @@ import java.util.ArrayList;
 public class Ex12_2 {
   /*
   * 제네릭 메서드가 makeJuice() 가 아래와 같이 정의되어 있을 때, 이 메서드를 올바르게 호출하는 문장을 모두 고르시오.
-  *  Juicer.<Apple>makeJuice(new FruitBox<Fruit>()); → 매개변수로 new FruitBox<Fruit>
-  *  Juicer.<Fruit>makeJuice(new FruitBox<Grape>()); → Fruit 과 그 하위타입만 메서드의 매개변수가 될 수 있다. 정상.
-  *  Juicer.<Fruit>makeJuice(new FruitBox<Fruit>()); → Fruit 과 그 하위타입만 메서드의 매개변수가 될 수 있다. 정상.
-  *  Juicer.makeJuice(new FruitBox<Apple>()); →
-  *  Juicer.makeJuice(new FruitBox<Object>());
+  *
+  *  sol:
+  *  Juicer.<Apple>makeJuice(new FruitBox<Fruit>()); → 에러. 타입 매개변수로 Apple 이 지정되었으므로 매개변수로 new FruitBox<Apple> 만 가능하다
+  *  Juicer.<Fruit>makeJuice(new FruitBox<Grape>()); → 에러. 타입 매개변수로 Fruit 이 지정되었으므로 매개변수로 new FruitBox<Fruit> 만 가능하다
+  *  Juicer.<Fruit>makeJuice(new FruitBox<Fruit>()); → 정상. 타입 매개변수로 Fruit 이 지정되었고 매개변수로 new FruitBox<Fruit> 만 가능하다.
+  *  Juicer.makeJuice(new FruitBox<Apple>()); → 정상. 타입 매개변수를 생략했지만 new FruitBox<Apple> 을 통해 매개변수가 Apple 로 추정되었고 Apple 타입은 <T extends Fruit> 을 만족한다.
+  *  Juicer.makeJuice(new FruitBox<Object>()); → 에러. 타입 매개변수를 생략했으므로 new FruitBox<Object> 을 통해 매개변수가 Object 추정되었지만 Object 타입은 <T extends Fruit> 을 만족하지 못한다.
   *
   * */
   public static void main(String[] args) {
-    Juicer.<Apple>makeJuice(new FruitBox<Fruit>());
-    Juicer.<Fruit>makeJuice(new FruitBox<Grape>());
+//    Juicer.<Apple>makeJuice(new FruitBox<Fruit>());
+//    Juicer.<Fruit>makeJuice(new FruitBox<Grape>());
+    Juicer.<Fruit>makeJuice(new FruitBox<Fruit>());
+    Juicer.makeJuice(new FruitBox<Apple>());
+//    Juicer.makeJuice(new FruitBox<Object>());
   }
 }
 
