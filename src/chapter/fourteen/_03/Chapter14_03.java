@@ -54,9 +54,14 @@ public class Chapter14_03 {
   *       sum += i;
   *     }
   *     return sum;
-  *   }
+  * }
   *
-  * arr ->
+  * (int[] arr) -> {
+  *   int sum = 0;
+  *   for (int i : arr) {
+  *     sum += i;
+  *   }
+  * }
   *
   *
   *
