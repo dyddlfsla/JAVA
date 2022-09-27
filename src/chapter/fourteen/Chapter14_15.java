@@ -35,20 +35,16 @@ public class Chapter14_15 {
      * 1. 스트림은 데이터 소스를 변경하지 않는다.
      *  스트림은 데이터 소스로 부터 데이터를 읽기만할 뿐, 데이터 소스를 변경하지 않는다. 다만, 필요하다면 정렬된 결과를 컬렉션이나 배열에 담아서 반환할 수 있다.
      */
-    List<String> sortedList = strStream2.sorted().collect(Collectors.toList()); //정렬된 결과를 새로운 List에 담아서 반환한다.
+    List<String> sortedList = strStream2.sorted()
+        .collect(Collectors.toList()); //정렬된 결과를 새로운 List에 담아서 반환한다.
 
     /**
-    * 2. 스트림은 일회용이다.
-    *  스트림은 Iterator처럼 일회용이다. 스트림도 한번 사용하면 닫혀서 다시 사용할 수 없다. 필요하다면 스트림을 다시 생성해야 한다.
-    */
+     * 2. 스트림은 일회용이다.
+     *  스트림은 Iterator처럼 일회용이다. 스트림도 한번 사용하면 닫혀서 다시 사용할 수 없다. 필요하다면 스트림을 다시 생성해야 한다.
+     */
 
     Stream<String> strStream3 = strList.stream();
     strStream3.sorted().forEach(System.out::println);
     long numOfStr = strStream3.count(); // Exception in thread "main" java.lang.IllegalStateException: stream has already been operated upon or closed. 스트림이 이미 닫혔다.
-
-    /**
-    * 3. 스트림은 작업
-    *
-    * */
- }
+  }
 }
