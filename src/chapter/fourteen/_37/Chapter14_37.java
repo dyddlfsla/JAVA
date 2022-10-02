@@ -36,7 +36,9 @@ public class Chapter14_37 {
   * 이 코드를 ifPresent() 를 사용하면 한층 더 간결하게 할 수 있다.
   *
   * Optional.ofNullable(str).ifPresent(System.out::println);
-  * null 이 아닐때만 람다식 내용을 수행하고 그
+  * null 이 아닐때만 람다식 내용을 수행하고 null 이면 아무것도 수행하지 않는다.
+  *
+  *
   *
   *
   *
